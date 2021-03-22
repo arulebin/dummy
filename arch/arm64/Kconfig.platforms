@@ -168,6 +168,19 @@ config ARCH_MSM8953
 	  This enables support for the MSM8953 chipset. If you do not
 	  wish to build a kernel that runs on this chipset, say 'N' here.
 
+config MACH_XIAOMI
+	bool "Enable support for Xiaomi"
+        select ARCH_MSM8953
+	help
+	  This enables support for Xiaomi.
+
+config MACH_XIAOMI_ROSY
+	bool "Enable support for Xiaomi Rosy"
+        select ARCH_XIAOMI
+        select ARCH_SDM450
+	help
+	  This enables support for Xiaomi Rosy.
+
 config ARCH_MSM8937
 	bool "Enable Support for Qualcomm Technologies Inc. MSM8937"
 	depends on ARCH_QCOM
